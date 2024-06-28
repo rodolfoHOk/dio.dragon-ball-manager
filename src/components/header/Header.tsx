@@ -7,7 +7,7 @@ export function Header() {
 
       <Link to="/">Gerenciador</Link>
 
-      <Link to="/address-form">Formulário de Endereços</Link>
+      <Link to="/cep">Formulário de Endereços</Link>
     </header>
   );
 }
