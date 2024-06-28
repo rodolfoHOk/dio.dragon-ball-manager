@@ -23,4 +23,4 @@
 
 ## Links
 
-- [DIO Reference project](https://github.com/lalizita/dragon-ball-manager)
+- [Projeto de Referência da DIO](https://github.com/lalizita/dragon-ball-manager)
