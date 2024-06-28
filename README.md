@@ -11,6 +11,16 @@
 - React Testing Library
 - Cypress
 
+### Diferenças com o projeto de referência
+
+- Uso do Typescript ao invés do Javascript puro
+- Uso do Tailwind CSS ao invés de bootstrap, reactstrap, rebass, theme-ui e styled-components
+- Versões mais novas das tecnologias
+
 ## Guia
 
 - iniciando projeto: npx create-react-app dragon-ball-manager --template typescript
+
+## Links
+
+- [DIO Reference project](https://github.com/lalizita/dragon-ball-manager)
