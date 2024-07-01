@@ -69,9 +69,11 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
           orientation="horizontal"
         />
 
-        <Toast.Action altText="voltar" className="flex justify-end">
-          <Button>Voltar</Button>
-        </Toast.Action>
+        <div className="flex justify-end">
+          <Toast.Action asChild altText="voltar">
+            <Button>Voltar</Button>
+          </Toast.Action>
+        </div>
       </Toast.Root>
     </>
   );

@@ -8,7 +8,7 @@ export function HomePage() {
   const allBalls = ballService.getBalls();
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 py-3">
       <InvocationAction profileId={profileId} />
 
       <BallCardList profileId={profileId} allBalls={allBalls} />
