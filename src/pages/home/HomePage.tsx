@@ -1,11 +1,10 @@
 import { InvocationAction } from '../../components/action/InvocationAction';
 import { BallCardList } from '../../components/ball-card-list/BallCardList';
-import { BallServiceFactory } from '../../services/factories/ball-service-factory';
+import { BallService } from '../../services/ball-service';
 
 export function HomePage() {
   const profileId = 1;
-  const ballService = BallServiceFactory.getInstance();
-  const allBalls = ballService.getBalls();
+  const allBalls = BallService.getBalls();
 
   return (
     <div className="flex flex-col gap-4 py-3">

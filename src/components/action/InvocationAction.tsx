@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import * as Toast from '@radix-ui/react-toast';
-import * as Separator from '@radix-ui/react-separator';
 import { motion } from 'framer-motion';
 import { Button } from '../button/Button';
-import { BallServiceFactory } from '../../services/factories/ball-service-factory';
+import { AppToast } from '../app-toast/AppToast';
+import { BallService } from '../../services/ball-service';
 
 type InvocationActionProps = {
   profileId: number;
@@ -14,14 +13,17 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
   const [showShenlong, setShowShenlong] = useState(false);
 
   function invocate() {
-    const service = BallServiceFactory.getInstance();
-    const hasAllBalls = service.hasAllBalls(profileId);
+    const hasAllBalls = BallService.hasAllBalls(profileId);
     if (!hasAllBalls) {
       setShowToast(true);
       return;
     }
     setShowShenlong(true);
     setTimeout(() => setShowShenlong(false), 6000);
+  }
+
+  function onShowToast(value: boolean) {
+    setShowToast(value);
   }
 
   return (
@@ -52,29 +54,11 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
         </Button>
       </div>
 
-      <Toast.Root
-        open={showToast}
-        onOpenChange={setShowToast}
-        className="relative w-fit px-6 py-4 flex flex-col gap-2 bg-zinc-200 dark:bg-zinc-800 rounded-lg"
-      >
-        <Toast.Title className="font-bold text-lg">Desculpe-nos</Toast.Title>
-
-        <Toast.Description className="font-normal text-base">
-          Você não tem todas as esferas para invocar o Shenlong
-        </Toast.Description>
-
-        <Separator.Root
-          className="h-[1px] w-full mt-2 mb-1 bg-neutral-300 dark:bg-neutral-700"
-          decorative
-          orientation="horizontal"
-        />
-
-        <div className="flex justify-end">
-          <Toast.Action asChild altText="voltar">
-            <Button>Voltar</Button>
-          </Toast.Action>
-        </div>
-      </Toast.Root>
+      <AppToast
+        message="Você não tem todas as esferas para invocar o Shenlong"
+        showToast={showToast}
+        setShowToast={onShowToast}
+      />
     </>
   );
 }

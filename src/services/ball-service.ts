@@ -1,7 +1,7 @@
 import { Ball } from '../models/ball';
 
 export class BallService {
-  private balls: Ball[] = [
+  private static balls: Ball[] = [
     {
       id: 1,
       name: '1 estrela',
@@ -46,11 +46,11 @@ export class BallService {
     },
   ];
 
-  getBalls(): Ball[] {
+  static getBalls(): Ball[] {
     return this.balls;
   }
 
-  foundedBall(ownerId: number, ballId: number) {
+  static foundedBall(ownerId: number, ballId: number) {
     this.balls = this.balls.map((ball) => {
       if (ball.id === ballId) {
         ball.owner = ownerId;
@@ -59,7 +59,7 @@ export class BallService {
     });
   }
 
-  hasAllBalls(ownerId: number) {
+  static hasAllBalls(ownerId: number) {
     const balls = this.balls.filter((ball) => ball.owner === ownerId);
     return balls.length === 7;
   }
