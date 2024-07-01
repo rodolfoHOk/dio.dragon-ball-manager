@@ -28,7 +28,10 @@ export function Header() {
           Formulário de Endereços
         </Link>
 
-        <ToggleButton onToggle={useTheme.toggleTheme} />
+        <ToggleButton
+          isChecked={useTheme.theme === 'dark'}
+          onToggle={useTheme.toggleTheme}
+        />
       </div>
     </header>
   );
