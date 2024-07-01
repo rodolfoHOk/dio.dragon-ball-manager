@@ -1,26 +1,34 @@
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/db-logo.png';
+import { ToggleButton } from '../toggle-button/ToggleButton';
+import { useContext } from 'react';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 export function Header() {
-  return (
-    <header className="w-full px-4 py-2 flex flex-row justify-between items-center bg-zinc-900">
-      <span className="font-bold text-2xl text-orange-500">
-        Gerenciador de Esferas do Dragão
-      </span>
+  const useTheme = useContext(ThemeContext);
 
-      <div className="flex gap-4">
+  return (
+    <header className="w-full px-4 py-2 flex flex-row justify-between items-center bg-orange-600">
+      <div className="w-64 h-10">
+        <img src={logo} alt="dragon ball" />
+      </div>
+
+      <div className="flex gap-4 items-center">
         <Link
           to="/"
-          className="text-lg font-semibold text-yellow-600 hover:text-yellow-400 transition-colors duration-200"
+          className="text-lg font-semibold text-yellow-300 hover:text-yellow-100 transition-colors duration-200"
         >
           Gerenciador
         </Link>
 
         <Link
           to="/cep"
-          className="text-lg font-semibold text-yellow-600 hover:text-yellow-400 transition-colors duration-200"
+          className="text-lg font-semibold text-yellow-300 hover:text-yellow-100 transition-colors duration-200"
         >
           Formulário de Endereços
         </Link>
+
+        <ToggleButton onToggle={useTheme.toggleTheme} />
       </div>
     </header>
   );
