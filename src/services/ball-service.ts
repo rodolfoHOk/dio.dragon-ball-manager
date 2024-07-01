@@ -6,50 +6,43 @@ export class BallService {
       id: 1,
       name: '1 estrela',
       owner: 0,
-      image:
-        'https://i.pinimg.com/564x/a5/f9/a2/a5f9a2eb5c0bfb1f66988696e1f31334.jpg',
+      image: '/images/dragonball-1-star.png',
     },
     {
       id: 2,
       name: '2 estrelas',
       owner: 0,
-      image:
-        'https://i.pinimg.com/564x/0b/72/75/0b72755a5ea5e1999d6fbfd3aa544355.jpg',
+      image: '/images/dragonball-2-stars.png',
     },
     {
       id: 3,
       name: '3 estrelas',
       owner: 0,
-      image:
-        'https://i.pinimg.com/564x/32/eb/b8/32ebb8536d0fa4108eef460694586d39.jpg',
+      image: '/images/dragonball-3-stars.png',
     },
     {
       id: 4,
       name: '4 estrelas',
       owner: 1,
-      image:
-        'https://i.pinimg.com/564x/7a/7f/76/7a7f76ea01702078582a1ae8b7344fb3.jpg',
+      image: '/images/dragonball-4-stars.png',
     },
     {
       id: 5,
       name: '5 estrelas',
       owner: 0,
-      image:
-        'https://i.pinimg.com/564x/13/19/62/1319628426fa9d3783705daf7db525f8.jpg',
+      image: '/images/dragonball-5-stars.png',
     },
     {
       id: 6,
       name: '6 estrelas',
       owner: 0,
-      image:
-        'https://i.pinimg.com/originals/6c/72/47/6c7247dfb67e18add93d682dc9fdabcc.png',
+      image: '/images/dragonball-6-stars.png',
     },
     {
       id: 7,
       name: '7 estrelas',
       owner: 0,
-      image:
-        'https://i.pinimg.com/564x/ec/8e/c5/ec8ec55eb1b4d4dfa3f7b2cbffe5bc6c.jpg',
+      image: '/images/dragonball-7-stars.png',
     },
   ];
 

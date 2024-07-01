@@ -14,8 +14,9 @@
 ### Diferenças com o projeto de referência
 
 - Uso do Typescript ao invés do Javascript puro
-- Uso do Tailwind CSS ao invés de bootstrap, reactstrap, rebass, theme-ui e styled-components
+- Uso do Tailwind CSS e Radix UI ao invés de bootstrap, reactstrap, rebass, theme-ui e styled-components
 - Versões mais novas das tecnologias
+- Tema dark e light
 
 ## Guia
 
@@ -24,3 +25,5 @@
 ## Links
 
 - [Projeto de Referência da DIO](https://github.com/lalizita/dragon-ball-manager)
+
+- [Remove BG](https://www.remove.bg/pt-br)
