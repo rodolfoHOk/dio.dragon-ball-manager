@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import * as Toast from '@radix-ui/react-toast';
 import { ThemeContext } from './contexts/ThemeContext';
 import { Header } from './components/header/Header';
 import { AppRoutes } from './routes/AppRoutes';
@@ -17,6 +18,8 @@ export function MainLayout() {
           <AppRoutes />
         </main>
       </div>
+
+      <Toast.Viewport className="fixed top-16 translate-y-2 right-1/2 translate-x-1/2 m-0 z-20 flex flex-col gap-3 max-w-[100vw]" />
     </div>
   );
 }

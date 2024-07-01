@@ -17,7 +17,6 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
   }
 
   useEffect(() => {
-    console.log(selected);
     if (selected === 'me') {
       const balls = allBalls.filter((ball) => ball.owner === profileId);
       setBalls(balls);
@@ -30,7 +29,7 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
   }, [selected, allBalls, profileId]);
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center">
         <h1 className="font-black text-2xl">
           Gerenciador de Esferas do Dragão
@@ -44,6 +43,6 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
           <BallCard key={ball.id} ball={ball} profileId={1} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+import { InvocationAction } from '../../components/action/InvocationAction';
 import { BallCardList } from '../../components/ball-card-list/BallCardList';
 import { BallServiceFactory } from '../../services/factories/ball-service-factory';
 
@@ -8,6 +9,8 @@ export function HomePage() {
 
   return (
     <div className="flex flex-col gap-4">
+      <InvocationAction profileId={profileId} />
+
       <BallCardList profileId={profileId} allBalls={allBalls} />
     </div>
   );

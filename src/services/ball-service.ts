@@ -58,4 +58,9 @@ export class BallService {
       return ball;
     });
   }
+
+  hasAllBalls(ownerId: number) {
+    const balls = this.balls.filter((ball) => ball.owner === ownerId);
+    return balls.length === 7;
+  }
 }

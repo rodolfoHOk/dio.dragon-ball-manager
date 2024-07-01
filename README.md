@@ -17,6 +17,7 @@
 - Uso do Tailwind CSS e Radix UI ao invés de bootstrap, reactstrap, rebass, theme-ui e styled-components
 - Versões mais novas das tecnologias
 - Tema dark e light
+- Uso da biblioteca Framer Motion ao invocar Shenlong
 
 ## Guia
 
