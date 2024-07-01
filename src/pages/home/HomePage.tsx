@@ -1,19 +1,14 @@
-import { BallCard } from '../../components/ball-card/BallCard';
+import { BallCardList } from '../../components/ball-card-list/BallCardList';
 import { BallServiceFactory } from '../../services/factories/ball-service-factory';
 
 export function HomePage() {
+  const profileId = 1;
   const ballService = BallServiceFactory.getInstance();
-  const balls = ballService.getBalls();
+  const allBalls = ballService.getBalls();
 
   return (
-    <div>
-      <h1>Gerenciador de Esferas do Dragão</h1>
-
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {balls.map((ball) => (
-          <BallCard key={ball.id} ball={ball} profileId={1} />
-        ))}
-      </div>
+    <div className="flex flex-col gap-4">
+      <BallCardList profileId={profileId} allBalls={allBalls} />
     </div>
   );
 }

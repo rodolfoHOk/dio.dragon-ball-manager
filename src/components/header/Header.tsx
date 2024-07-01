@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 export function Header() {
-  const useTheme = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className="w-full px-4 py-2 flex flex-row justify-between items-center bg-orange-600">
@@ -28,10 +28,7 @@ export function Header() {
           Formulário de Endereços
         </Link>
 
-        <ToggleButton
-          isChecked={useTheme.theme === 'dark'}
-          onToggle={useTheme.toggleTheme}
-        />
+        <ToggleButton isChecked={theme === 'dark'} onToggle={toggleTheme} />
       </div>
     </header>
   );

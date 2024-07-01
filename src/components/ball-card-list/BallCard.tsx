@@ -9,7 +9,7 @@ type BallCardProps = {
 
 export function BallCard({ ball, profileId }: BallCardProps) {
   return (
-    <div className="w-full p-4 flex flex-col bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-50 rounded-lg border-2 border-neutral-300">
+    <div className="w-full p-4 flex flex-col bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-50 rounded-lg border-2 border-neutral-300 transition-colors duration-300">
       <div>
         <img src={ball.image} alt={ball.name} />
       </div>
