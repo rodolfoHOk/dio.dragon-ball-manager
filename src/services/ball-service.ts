@@ -5,13 +5,13 @@ export class BallService {
     {
       id: 1,
       name: '1 estrela',
-      owner: 0,
+      owner: 1,
       image: '/images/dragonball-1-star.png',
     },
     {
       id: 2,
       name: '2 estrelas',
-      owner: 0,
+      owner: 1,
       image: '/images/dragonball-2-stars.png',
     },
     {
@@ -35,13 +35,13 @@ export class BallService {
     {
       id: 6,
       name: '6 estrelas',
-      owner: 0,
+      owner: 1,
       image: '/images/dragonball-6-stars.png',
     },
     {
       id: 7,
       name: '7 estrelas',
-      owner: 0,
+      owner: 1,
       image: '/images/dragonball-7-stars.png',
     },
   ];

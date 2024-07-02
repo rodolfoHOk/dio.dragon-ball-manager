@@ -6,6 +6,7 @@ import { Button } from '../button/Button';
 import { FormEvent, useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Input } from '../input/Input';
+import { Label } from '../label/Label';
 
 type BallFormModalProps = {
   ball: Ball;
@@ -29,9 +30,13 @@ export function BallFormModal({ ball, onValidate }: BallFormModalProps) {
       </Dialog.Close>
 
       <div className="px-5 pb-3 flex flex-col gap-2">
-        <Dialog.Title className="font-bold text-lg">
+        <Dialog.Title className="font-bold text-xl">
           Validar esfera do dragão
         </Dialog.Title>
+
+        <Dialog.Description className="hidden">
+          "Validar esfera do dragão"
+        </Dialog.Description>
 
         <form onSubmit={onValidate}>
           <Input
@@ -42,9 +47,10 @@ export function BallFormModal({ ball, onValidate }: BallFormModalProps) {
           />
 
           <fieldset className="flex flex-col gap-2">
-            <label className="" htmlFor="ballCode">
+            <Label htmlFor="ballCode">
               Insira o código de esfera de {`${ball.name}`}
-            </label>
+            </Label>
+
             <Input id="ballCode" name="ballCode" />
           </fieldset>
 

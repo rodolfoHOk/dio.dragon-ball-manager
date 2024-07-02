@@ -54,9 +54,9 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
     <>
       <div className="flex flex-col gap-4">
         <div className="flex justify-between items-center">
-          <h1 className="font-black text-2xl">
+          <h2 className="font-black text-2xl">
             Gerenciador de Esferas do Dragão
-          </h1>
+          </h2>
 
           <BallFilterForm currentValue={selected} onSelect={onSelect} />
         </div>
