@@ -1,4 +1,4 @@
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Ball } from '../../models/ball';
 import { Badge } from '../badge/Badge';
@@ -12,8 +12,10 @@ type BallCardProps = {
 };
 
 export function BallCard({ ball, profileId, onValidate }: BallCardProps) {
+  let [openModal, setOpenModel] = useState(false);
+
   return (
-    <Dialog.Root>
+    <Dialog.Root open={openModal} onOpenChange={setOpenModel}>
       <div className="w-full p-4 flex flex-col bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-50 rounded-lg border-2 border-neutral-300 transition-colors duration-300">
         <div>
           <img src={ball.image} alt={ball.name} />
@@ -43,7 +45,11 @@ export function BallCard({ ball, profileId, onValidate }: BallCardProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/25 transition-colors duration-300" />
 
-        <BallFormModal ball={ball} onValidate={onValidate} />
+        <BallFormModal
+          ball={ball}
+          onValidate={onValidate}
+          afterValidate={() => setOpenModel(false)}
+        />
       </Dialog.Portal>
     </Dialog.Root>
   );

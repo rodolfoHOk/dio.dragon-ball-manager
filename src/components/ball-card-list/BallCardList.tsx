@@ -32,7 +32,6 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
       BallService.foundedBall(profileId, Number(ballId));
       const balls = BallService.getBalls();
       setBalls(balls);
-      setShowToast(false);
     } else {
       setShowToast(true);
     }

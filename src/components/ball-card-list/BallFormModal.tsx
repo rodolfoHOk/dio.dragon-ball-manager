@@ -11,10 +11,20 @@ import { Label } from '../label/Label';
 type BallFormModalProps = {
   ball: Ball;
   onValidate: (event: FormEvent<HTMLFormElement>) => void;
+  afterValidate: () => void;
 };
 
-export function BallFormModal({ ball, onValidate }: BallFormModalProps) {
+export function BallFormModal({
+  ball,
+  onValidate,
+  afterValidate,
+}: BallFormModalProps) {
   const { theme } = useContext(ThemeContext);
+
+  function handleValidate(event: FormEvent<HTMLFormElement>) {
+    onValidate(event);
+    afterValidate();
+  }
 
   return (
     <Dialog.Content
@@ -38,7 +48,7 @@ export function BallFormModal({ ball, onValidate }: BallFormModalProps) {
           "Validar esfera do dragão"
         </Dialog.Description>
 
-        <form onSubmit={onValidate}>
+        <form onSubmit={handleValidate}>
           <Input
             className="hidden"
             id="ballId"
@@ -55,7 +65,7 @@ export function BallFormModal({ ball, onValidate }: BallFormModalProps) {
           </fieldset>
 
           <Separator.Root
-            className="h-[1px] w-full mt-2 mb-1 bg-neutral-300 dark:bg-neutral-700"
+            className="h-[1px] w-full mt-5 mb-3 bg-neutral-300 dark:bg-neutral-700"
             decorative
             orientation="horizontal"
           />
