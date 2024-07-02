@@ -56,3 +56,5 @@
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 - [Cypress docs](https://docs.cypress.io/guides/overview/why-cypress)
+
+- [Cypress migration-guide](https://docs.cypress.io/guides/references/migration-guide)
