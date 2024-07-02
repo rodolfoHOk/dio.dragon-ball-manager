@@ -7,9 +7,9 @@
 - Typescript / Javascript
 - React.js
 - Tailwind CSS
-- Jest
-- React Testing Library
-- Cypress
+- Jest (tests)
+- React Testing Library (tests)
+- Cypress (tests)
 
 ### Diferenças com o projeto de referência
 
@@ -45,8 +45,14 @@
 
 - iniciando projeto: npx create-react-app dragon-ball-manager --template typescript
 
+- cypress open: npx cypress open
+
 ## Links
 
 - [Projeto de Referência da DIO](https://github.com/lalizita/dragon-ball-manager)
 
 - [Remove BG](https://www.remove.bg/pt-br)
+
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+
+- [Cypress docs](https://docs.cypress.io/guides/overview/why-cypress)
