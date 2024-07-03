@@ -1,5 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test address form page should render address form 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 py-3"
+  >
+    <h2
+      class="font-black text-2xl"
+    >
+      Formulário de Endereços
+    </h2>
+    <form
+      class="flex flex-row gap-4"
+    >
+      <fieldset
+        class="flex flex-col gap-2"
+      >
+        <label
+          class="font-bold text-lg undefined"
+          for="cep"
+        >
+          CEP
+        </label>
+        <input
+          class="w-full px-4 py-2 flex-1 inline-flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 text-lg font-bold text-zinc-950 dark:text-zinc-50 border border-neutral-500 rounded-md undefined"
+          id="cep"
+          name="cep"
+          placeholder="CEP"
+          value="01001000"
+        />
+      </fieldset>
+      <fieldset
+        class="flex flex-col gap-2"
+      >
+        <label
+          class="font-bold text-lg undefined"
+          for="bairro"
+        >
+          Bairro
+        </label>
+        <input
+          class="w-full px-4 py-2 flex-1 inline-flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 text-lg font-bold text-zinc-950 dark:text-zinc-50 border border-neutral-500 rounded-md undefined"
+          id="bairro"
+          name="bairro"
+          placeholder="bairro"
+          value="Sé"
+        />
+      </fieldset>
+      <fieldset
+        class="flex flex-col gap-2"
+      >
+        <label
+          class="font-bold text-lg undefined"
+          for="logradouro"
+        >
+          Logradouro
+        </label>
+        <input
+          class="w-full px-4 py-2 flex-1 inline-flex justify-center items-center bg-zinc-100 dark:bg-zinc-900 text-lg font-bold text-zinc-950 dark:text-zinc-50 border border-neutral-500 rounded-md undefined"
+          id="logradouro"
+          name="logradouro"
+          placeholder="logradouro"
+          value="Praça da Sé"
+        />
+      </fieldset>
+    </form>
+  </div>
+</div>
+`;
+
 exports[`test address form should render address form 1`] = `
 <div>
   <div

@@ -58,3 +58,5 @@
 - [Cypress docs](https://docs.cypress.io/guides/overview/why-cypress)
 
 - [Cypress migration-guide](https://docs.cypress.io/guides/references/migration-guide)
+
+- [Cypress commands](https://docs.cypress.io/api/table-of-contents)

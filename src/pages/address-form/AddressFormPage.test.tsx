@@ -13,7 +13,7 @@ const assetsFetchMock = () =>
     }),
   } as Response);
 
-describe('test address form', () => {
+describe('test address form page', () => {
   let fetchMock: jest.MockInstance<Promise<Response>, any> | undefined;
 
   beforeEach(() => {
