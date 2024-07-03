@@ -19,7 +19,10 @@ export function AppToast({ message, showToast, setShowToast }: AppToastProps) {
         Gerenciador de Esferas do Dragão
       </Toast.Title>
 
-      <Toast.Description className="font-normal text-base">
+      <Toast.Description
+        className="font-normal text-base"
+        data-testId="toast-message"
+      >
         {message}
       </Toast.Description>
 
@@ -31,7 +34,9 @@ export function AppToast({ message, showToast, setShowToast }: AppToastProps) {
 
       <div className="flex justify-end">
         <Toast.Action asChild altText="voltar">
-          <Button variant="secondary">Voltar</Button>
+          <Button variant="secondary" data-testId="toast-back-button">
+            Voltar
+          </Button>
         </Toast.Action>
       </div>
     </Toast.Root>

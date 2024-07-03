@@ -49,7 +49,7 @@
 
 ## Links
 
-- [Projeto de Referência da DIO](https://github.com/lalizita/dragon-ball-manager)
+- [Projeto de Referência da DIO](https://github.com/lalizita/dragon-ball-manager-challenge)
 
 - [Remove BG](https://www.remove.bg/pt-br)
 

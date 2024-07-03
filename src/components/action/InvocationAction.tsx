@@ -41,15 +41,22 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.5, duration: 2 }}
           >
-            <img src="/images/shenlong.webp" alt="Shenlong apareceu" />
+            <img
+              src="/images/shenlong.webp"
+              alt="Shenlong apareceu"
+              data-testId="shenlong-image"
+            />
           </motion.div>
         </motion.div>
       )}
 
-      <div className="p-6 flex flex-col items-center justify-center gap-4 bg-zinc-100 dark:bg-zinc-900">
+      <div
+        className="p-6 flex flex-col items-center justify-center gap-4 bg-zinc-100 dark:bg-zinc-900"
+        data-testId="invocation-card"
+      >
         <h2 className="font-bold text-2xl">Invocar Shenlong</h2>
 
-        <Button className="w-48" onClick={invocate}>
+        <Button className="w-48" onClick={invocate} data-testId="invoke-button">
           Invocar
         </Button>
       </div>

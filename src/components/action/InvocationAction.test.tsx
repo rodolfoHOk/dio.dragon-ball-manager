@@ -34,6 +34,7 @@ describe('invocation action component test', () => {
     expect(
       screen.getByText('Você não tem todas as esferas para invocar o Shenlong')
     ).toBeInTheDocument();
+    expect(screen.queryByAltText('Shenlong apareceu')).toBeNull();
 
     const backButton = screen.getByText('Voltar');
     fireEvent.click(backButton);
@@ -42,6 +43,7 @@ describe('invocation action component test', () => {
         'Você não tem todas as esferas para invocar o Shenlong'
       )
     ).toBeNull();
+    expect(screen.queryByAltText('Shenlong apareceu')).toBeNull();
   });
 
   it('should show shenlong', () => {
