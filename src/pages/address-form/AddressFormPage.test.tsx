@@ -2,22 +2,21 @@ import { act } from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { AddressFormPage } from './AddressFormPage';
 
-const assetsFetchMock = () =>
-  Promise.resolve({
-    ok: true,
-    status: 200,
-    json: async () => ({
-      cep: '01001000',
-      bairro: 'Sé',
-      logradouro: 'Praça da Sé',
-    }),
-  } as Response);
-
 describe('test address form page', () => {
   let fetchMock: jest.MockInstance<Promise<Response>, any> | undefined;
 
   beforeEach(() => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(assetsFetchMock);
+    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
+      Promise.resolve({
+        ok: true,
+        status: 200,
+        json: async () => ({
+          cep: '01001000',
+          bairro: 'Sé',
+          logradouro: 'Praça da Sé',
+        }),
+      } as Response)
+    );
   });
 
   afterEach(() => {
@@ -26,6 +25,16 @@ describe('test address form page', () => {
 
   it('should render address form', async () => {
     const { container } = render(<AddressFormPage />);
+
+    expect(screen.getByText('Formulário de Endereços')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('CEP')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('bairro')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('logradouro')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should fetch of cep data and fill the form', async () => {
+    render(<AddressFormPage />);
 
     const cepInput = screen.getByPlaceholderText('CEP');
     fireEvent.change(cepInput, { target: { value: '01001000' } });
@@ -44,6 +53,5 @@ describe('test address form page', () => {
       'value',
       'Praça da Sé'
     );
-    expect(container).toMatchSnapshot();
   });
 });

@@ -44,7 +44,7 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
             <img
               src="/images/shenlong.webp"
               alt="Shenlong apareceu"
-              data-testId="shenlong-image"
+              data-testid="shenlong-image"
             />
           </motion.div>
         </motion.div>
@@ -52,11 +52,11 @@ export function InvocationAction({ profileId }: InvocationActionProps) {
 
       <div
         className="p-6 flex flex-col items-center justify-center gap-4 bg-zinc-100 dark:bg-zinc-900"
-        data-testId="invocation-card"
+        data-testid="invocation-card"
       >
         <h2 className="font-bold text-2xl">Invocar Shenlong</h2>
 
-        <Button className="w-48" onClick={invocate} data-testId="invoke-button">
+        <Button className="w-48" onClick={invocate} data-testid="invoke-button">
           Invocar
         </Button>
       </div>

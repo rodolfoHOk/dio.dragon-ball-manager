@@ -4,13 +4,13 @@ describe('shenlong invocation test', () => {
   });
 
   it('should show toast if user do not have all balls', () => {
-    cy.get('[data-testId="invocation-card"]').should('exist');
-    cy.get('[data-testId="invoke-button"]').click();
-    cy.get('[data-testId="toast-message"]').should(
+    cy.get('[data-testid="invocation-card"]').should('exist');
+    cy.get('[data-testid="invoke-button"]').click();
+    cy.get('[data-testid="toast-message"]').should(
       'contain.text',
       'Você não tem todas as esferas para invocar o Shenlong'
     );
-    cy.get('[data-testId="toast-back-button"]').click();
-    cy.get('[data-testId="shenlong-image"]').should('not.exist');
+    cy.get('[data-testid="toast-back-button"]').click();
+    cy.get('[data-testid="shenlong-image"]').should('not.exist');
   });
 });

@@ -14,7 +14,7 @@ exports[`invocation action component test should render invocation action 1`] = 
       </h2>
       <button
         class="h-10 px-4 flex flex-row items-center justify-center font-bold rounded  transition-colors duration-300 bg-orange-400 text-red-800 hover:bg-orange-300 w-48"
-        data-testid="invocation-button"
+        data-testid="invoke-button"
       >
         Invocar
       </button>

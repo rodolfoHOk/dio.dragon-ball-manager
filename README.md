@@ -19,6 +19,32 @@
 - Tema dark e light
 - Uso da biblioteca Framer Motion ao invocar Shenlong
 
+## Desafios
+
+Esta é uma aplicação para você poder invocar Shenlong, porém ela tem alguns probleminhas, e além desses probleminhas pra serem resolvidos vocês precisam adicionar testes.
+
+Ja temos o [Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) e [Cypress](https://www.cypress.io/) instalados. Todas essas libs são ferramentas de testes
+
+Aqui vão alguns casos para testar porém você pode ir além:
+
+- Testar o filtro no select para exibir todas as esferas, as esferas que eu tenho e as que eu não tenho
+- Se eu tiver todas as esferas tenho que conseguir invocar o shenlong
+- ... O que mais você desejar! Solte a imaginação!
+
+### Desafios realizados
+
+#### No projeto original clonado
+
+- [Repositório clonado com erros corrigidos e testes implementados](https://github.com/rodolfoHOk/dio.dragon-ball-manager-challenge)
+
+#### Testes implementados neste projeto refeito usando as tecnologias citadas
+
+- test address form page: should render address form
+- test address form page: should fetch of cep data and fill the form
+- invocation action component test: should render invocation action
+- invocation action component test: should show toast if user do not have all balls
+- invocation action component test: should show shenlong if user has all balls
+
 ## Imagens do projeto
 
 <img src="https://raw.githubusercontent.com/rodolfoHOk/portfolio-img/main/images/dragon-ball-manager-01.png" alt="Dragon Ball Manager 01" height="400" />
@@ -60,3 +86,26 @@
 - [Cypress migration-guide](https://docs.cypress.io/guides/references/migration-guide)
 
 - [Cypress commands](https://docs.cypress.io/api/table-of-contents)
+
+## Como rodar
+
+Para fazer este repositório funcionar você deve clonar este repositório e ter no Node.js 20 instalado
+
+Instalar as dependências e rodar:
+
+```
+  npm install
+  npm run start
+```
+
+Para rodar os testes com testing library
+
+```
+  npm run test
+```
+
+Para rodar os testes com Cypress
+
+```
+  npm run cy:run
+```

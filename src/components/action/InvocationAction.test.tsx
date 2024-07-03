@@ -1,6 +1,6 @@
+import { ToastProvider, ToastViewport } from '@radix-ui/react-toast';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { InvocationAction } from './InvocationAction';
-import { ToastProvider, ToastViewport } from '@radix-ui/react-toast';
 import { BallService } from '../../services/ball-service';
 
 describe('invocation action component test', () => {
@@ -46,7 +46,7 @@ describe('invocation action component test', () => {
     expect(screen.queryByAltText('Shenlong apareceu')).toBeNull();
   });
 
-  it('should show shenlong', () => {
+  it('should show shenlong if user has all balls', () => {
     render(
       <ToastProvider>
         <div>
