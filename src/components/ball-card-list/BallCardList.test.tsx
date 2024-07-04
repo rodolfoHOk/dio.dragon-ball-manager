@@ -124,7 +124,7 @@ describe('ball card list component test', () => {
     expect(iFoundButton).toBeInTheDocument();
     fireEvent.click(iFoundButton);
 
-    const codeInput = screen.getByTestId('ball-code-input');
+    const codeInput = screen.getByTestId('ball-code-input-3');
     fireEvent.change(codeInput, { target: { value: 'esfera-3-valida' } });
 
     const validateButton = screen.getByTestId('validate-button-3');

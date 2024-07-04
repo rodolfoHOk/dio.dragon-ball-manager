@@ -44,6 +44,21 @@ Aqui vão alguns casos para testar porém você pode ir além:
 - invocation action component test: should render invocation action
 - invocation action component test: should show toast if user do not have all balls
 - invocation action component test: should show shenlong if user has all balls
+- ball card list component test: should render ball card list
+- ball card list component test: should filter my balls
+- ball card list component test: should filter not founded balls
+- ball card list component test: should not filter when all is selected
+- ball card list component test: should open validate ball modal
+- ball card list component test: should show toast if enter with invalid code
+- ball card list component test: should validate ball code
+
+- address form page e2e test: should request cep address and fill form fields
+- dragon balls manager page e2e test: should filter my balls
+- dragon balls manager page e2e test: should filter not founded balls
+- dragon balls manager page e2e test: should no filter balls if all is selected
+- dragon balls manager page e2e test: should show invalid ball code toast
+- dragon balls manager page e2e test: should not invoke if user does not have 7 dragon balls
+- dragon balls manager page e2e test: should invoke if user has 7 dragon balls
 
 ## Imagens do projeto
 

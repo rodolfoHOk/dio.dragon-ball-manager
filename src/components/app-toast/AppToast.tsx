@@ -20,8 +20,8 @@ export function AppToast({ message, showToast, setShowToast }: AppToastProps) {
       </Toast.Title>
 
       <Toast.Description
-        className="font-normal text-base"
         data-testid="toast-message"
+        className="font-normal text-base"
       >
         {message}
       </Toast.Description>
@@ -34,7 +34,7 @@ export function AppToast({ message, showToast, setShowToast }: AppToastProps) {
 
       <div className="flex justify-end">
         <Toast.Action asChild altText="voltar">
-          <Button variant="secondary" data-testid="toast-back-button">
+          <Button data-testid="toast-back-button" variant="secondary">
             Voltar
           </Button>
         </Toast.Action>

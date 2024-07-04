@@ -62,7 +62,7 @@ export function BallFormModal({
             </Label>
 
             <Input
-              data-testid="ball-code-input"
+              data-testid={`ball-code-input-${Array.from(ball.name)[0]}`}
               id="ballCode"
               name="ballCode"
             />
