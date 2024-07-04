@@ -2,16 +2,12 @@ import * as Toast from '@radix-ui/react-toast';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { InvocationAction } from './InvocationAction';
 import { BallService } from '../../services/ball-service';
+import { ProfileService } from '../../services/profile-service';
 
 describe('invocation action component test', () => {
   it('should render invocation action', () => {
     const { container } = render(
-      <Toast.Provider>
-        <div>
-          <InvocationAction profileId={1} />
-          <Toast.Viewport />
-        </div>
-      </Toast.Provider>
+      <InvocationAction profile={ProfileService.getProfile(1)!} />
     );
 
     expect(screen.getByText('Invocar Shenlong')).toBeInTheDocument();
@@ -23,7 +19,7 @@ describe('invocation action component test', () => {
     render(
       <Toast.Provider>
         <div>
-          <InvocationAction profileId={1} />
+          <InvocationAction profile={ProfileService.getProfile(1)!} />
           <Toast.Viewport />
         </div>
       </Toast.Provider>
@@ -50,7 +46,7 @@ describe('invocation action component test', () => {
     render(
       <Toast.Provider>
         <div>
-          <InvocationAction profileId={1} />
+          <InvocationAction profile={ProfileService.getProfile(1)!} />
           <Toast.Viewport />
         </div>
       </Toast.Provider>

@@ -1,4 +1,5 @@
 import { Ball } from '../models/ball';
+import { ProfileService } from './profile-service';
 
 export class BallService {
   private static balls: Ball[] = [
@@ -53,6 +54,7 @@ export class BallService {
   static foundedBall(ownerId: number, ballId: number) {
     this.balls = this.balls.map((ball) => {
       if (ball.id === ballId) {
+        ProfileService.addBall(ownerId, ball.id);
         ball.owner = ownerId;
       }
       return ball;

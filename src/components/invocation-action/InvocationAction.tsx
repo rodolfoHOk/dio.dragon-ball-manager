@@ -3,17 +3,18 @@ import { motion } from 'framer-motion';
 import { Button } from '../button/Button';
 import { AppToast } from '../app-toast/AppToast';
 import { BallService } from '../../services/ball-service';
+import { Profile } from '../../models/profile';
 
 type InvocationActionProps = {
-  profileId: number;
+  profile: Profile;
 };
 
-export function InvocationAction({ profileId }: InvocationActionProps) {
+export function InvocationAction({ profile }: InvocationActionProps) {
   const [showToast, setShowToast] = useState(false);
   const [showShenlong, setShowShenlong] = useState(false);
 
   function invocate() {
-    const hasAllBalls = BallService.hasAllBalls(profileId);
+    const hasAllBalls = BallService.hasAllBalls(profile.id);
     if (!hasAllBalls) {
       setShowToast(true);
       return;
