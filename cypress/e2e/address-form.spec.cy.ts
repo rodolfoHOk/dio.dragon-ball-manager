@@ -1,4 +1,4 @@
-describe('CEP e2e test', () => {
+describe('address form page e2e test', () => {
   before(() => {
     cy.visit('http://localhost:3000/cep');
   });
