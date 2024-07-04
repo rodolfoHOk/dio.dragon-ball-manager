@@ -73,7 +73,7 @@ export function BallCardList({ profileId, allBalls }: BallCardListProps) {
       </div>
 
       <AppToast
-        message="Código da esfera do dragão não confere "
+        message="Código da esfera do dragão não confere"
         showToast={showToast}
         setShowToast={onShowToast}
       />

@@ -16,7 +16,10 @@ export function BallCard({ ball, profileId, onValidate }: BallCardProps) {
 
   return (
     <Dialog.Root open={openModal} onOpenChange={setOpenModel}>
-      <div className="w-full p-4 flex flex-col bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-50 rounded-lg border-2 border-neutral-300 transition-colors duration-300">
+      <div
+        data-testid="card"
+        className="w-full p-4 flex flex-col bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-50 rounded-lg border-2 border-neutral-300 transition-colors duration-300"
+      >
         <div>
           <img src={ball.image} alt={ball.name} />
         </div>
@@ -36,7 +39,12 @@ export function BallCard({ ball, profileId, onValidate }: BallCardProps) {
         <div className="flex justify-center">
           {ball.owner === profileId ? null : (
             <Dialog.Trigger asChild>
-              <Button className="w-full">Encontrei</Button>
+              <Button
+                data-testid={`card-button-${Array.from(ball.name)[0]}`}
+                className="w-full"
+              >
+                Encontrei
+              </Button>
             </Dialog.Trigger>
           )}
         </div>

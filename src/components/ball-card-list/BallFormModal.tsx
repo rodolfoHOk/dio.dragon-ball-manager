@@ -61,7 +61,11 @@ export function BallFormModal({
               Insira o código de esfera de {`${ball.name}`}
             </Label>
 
-            <Input id="ballCode" name="ballCode" />
+            <Input
+              data-testid="ball-code-input"
+              id="ballCode"
+              name="ballCode"
+            />
           </fieldset>
 
           <Separator.Root
@@ -71,7 +75,12 @@ export function BallFormModal({
           />
 
           <div className="flex justify-end gap-3">
-            <Button type="submit">Validar</Button>
+            <Button
+              data-testid={`validate-button-${Array.from(ball.name)[0]}`}
+              type="submit"
+            >
+              Validar
+            </Button>
 
             <Dialog.Close asChild>
               <Button type="button" variant="secondary">

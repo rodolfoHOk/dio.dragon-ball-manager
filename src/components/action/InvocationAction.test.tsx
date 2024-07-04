@@ -1,4 +1,4 @@
-import { ToastProvider, ToastViewport } from '@radix-ui/react-toast';
+import * as Toast from '@radix-ui/react-toast';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { InvocationAction } from './InvocationAction';
 import { BallService } from '../../services/ball-service';
@@ -6,12 +6,12 @@ import { BallService } from '../../services/ball-service';
 describe('invocation action component test', () => {
   it('should render invocation action', () => {
     const { container } = render(
-      <ToastProvider>
+      <Toast.Provider>
         <div>
           <InvocationAction profileId={1} />
-          <ToastViewport />
+          <Toast.Viewport />
         </div>
-      </ToastProvider>
+      </Toast.Provider>
     );
 
     expect(screen.getByText('Invocar Shenlong')).toBeInTheDocument();
@@ -21,12 +21,12 @@ describe('invocation action component test', () => {
 
   it('should show toast if user do not have all balls', () => {
     render(
-      <ToastProvider>
+      <Toast.Provider>
         <div>
           <InvocationAction profileId={1} />
-          <ToastViewport />
+          <Toast.Viewport />
         </div>
-      </ToastProvider>
+      </Toast.Provider>
     );
 
     const button = screen.getByText('Invocar');
@@ -48,12 +48,12 @@ describe('invocation action component test', () => {
 
   it('should show shenlong if user has all balls', () => {
     render(
-      <ToastProvider>
+      <Toast.Provider>
         <div>
           <InvocationAction profileId={1} />
-          <ToastViewport />
+          <Toast.Viewport />
         </div>
-      </ToastProvider>
+      </Toast.Provider>
     );
 
     jest.spyOn(BallService, 'hasAllBalls').mockImplementation(() => true);

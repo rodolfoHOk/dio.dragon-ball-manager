@@ -20,7 +20,10 @@ export function BallFilterForm({
       <Label.Root className="font-bold text-lg">Filtrar</Label.Root>
 
       <Select.Root defaultValue={currentValue} onValueChange={onSelect}>
-        <Select.Trigger className="w-44 h-10 px-2 inline-flex items-center justify-between gap-1 bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-100 border border-neutral-500 rounded shadow transition-colors duration-300">
+        <Select.Trigger
+          data-testid="filter-trigger"
+          className="w-44 h-10 px-2 inline-flex items-center justify-between gap-1 bg-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-800 hover:bg-zinc-100 border border-neutral-500 rounded shadow transition-colors duration-300"
+        >
           <Select.Value />
 
           <Select.Icon>
@@ -35,6 +38,7 @@ export function BallFilterForm({
             <Select.Viewport className="flex flex-col">
               <Select.Group className="flex flex-col">
                 <Select.Item
+                  data-testid="filter-option-0"
                   className="h-10 px-2 flex items-center justify-between focus:outline-none focus:bg-zinc-200 focus:dark:bg-zinc-700 rounded-md transition-colors duration-300"
                   value="all"
                 >
@@ -46,6 +50,7 @@ export function BallFilterForm({
                 </Select.Item>
 
                 <Select.Item
+                  data-testid="filter-option-1"
                   className="h-10 px-2 flex items-center justify-between focus:outline-none focus:bg-zinc-200 focus:dark:bg-zinc-700 rounded-md transition-colors duration-300"
                   value="me"
                 >
@@ -57,6 +62,7 @@ export function BallFilterForm({
                 </Select.Item>
 
                 <Select.Item
+                  data-testid="filter-option-2"
                   className="h-10 px-2 flex items-center justify-between focus:outline-none focus:bg-zinc-200 focus:dark:bg-zinc-700 rounded-md transition-colors duration-300"
                   value="not-me"
                 >
