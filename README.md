@@ -39,6 +39,8 @@ Aqui vão alguns casos para testar porém você pode ir além:
 
 #### Testes implementados neste projeto refeito usando as tecnologias citadas
 
+React testing library:
+
 - test address form page: should render address form
 - test address form page: should fetch of cep data and fill the form
 - invocation action component test: should render invocation action
@@ -52,6 +54,8 @@ Aqui vão alguns casos para testar porém você pode ir além:
 - ball card list component test: should show toast if enter with invalid code
 - ball card list component test: should validate ball code
 
+Cypress:
+
 - address form page e2e test: should request cep address and fill form fields
 - dragon balls manager page e2e test: should filter my balls
 - dragon balls manager page e2e test: should filter not founded balls
@@ -59,6 +63,8 @@ Aqui vão alguns casos para testar porém você pode ir além:
 - dragon balls manager page e2e test: should show invalid ball code toast
 - dragon balls manager page e2e test: should not invoke if user does not have 7 dragon balls
 - dragon balls manager page e2e test: should invoke if user has 7 dragon balls
+- theme e2e test: should has light theme
+- theme e2e test: should change to dark theme
 
 ## Imagens do projeto
 

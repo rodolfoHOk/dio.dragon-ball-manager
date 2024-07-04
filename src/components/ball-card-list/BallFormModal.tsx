@@ -28,6 +28,7 @@ export function BallFormModal({
 
   return (
     <Dialog.Content
+      data-testId="ball-form-modal"
       className={`${theme} fixed top-20 left-1/2 -translate-x-1/2 bg-zinc-100 dark:bg-zinc-800 px-1 py-1 flex flex-col text-zinc-950 dark:text-zinc-50 rounded-md`}
     >
       <Dialog.Close asChild>
@@ -83,7 +84,11 @@ export function BallFormModal({
             </Button>
 
             <Dialog.Close asChild>
-              <Button type="button" variant="secondary">
+              <Button
+                data-testid={`back-button-${Array.from(ball.name)[0]}`}
+                type="button"
+                variant="secondary"
+              >
                 Voltar
               </Button>
             </Dialog.Close>

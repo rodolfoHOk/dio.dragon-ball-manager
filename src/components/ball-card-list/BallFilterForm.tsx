@@ -33,6 +33,7 @@ export function BallFilterForm({
 
         <Select.Portal>
           <Select.Content
+            data-testid="ball-filter-select-content"
             className={`${theme} w-48 p-2 flex flex-col bg-zinc-50 dark:bg-zinc-900 text-zinc-950 dark:text-zinc-50 border border-neutral-500 rounded-md shadow-md`}
           >
             <Select.Viewport className="flex flex-col">
