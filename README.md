@@ -37,7 +37,7 @@ Aqui vão alguns casos para testar porém você pode ir além:
 
 - [Repositório clonado com erros corrigidos e testes implementados](https://github.com/rodolfoHOk/dio.dragon-ball-manager-challenge)
 
-#### Testes implementados neste projeto refeito usando as tecnologias citadas
+## Testes implementados neste projeto refeito usando as tecnologias citadas
 
 React testing library:
 
